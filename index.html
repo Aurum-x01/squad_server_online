@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squad: список серверів</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html" class="active">Усі сервери</a>
+        <a href="favorites.html">Улюблені <span id="fav-count"></span></a>
+    </nav>
+
+    <header class="hero">
+        <div class="radar" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="hero-text">
+            <h1>Squad серверів онлайн</h1>
+            <p class="stats" id="stats">Сканую ефір…</p>
+        </div>
+    </header>
+
+    <section class="controls">
+        <input id="search" type="search" placeholder="Пошук за назвою або мапою" aria-label="Пошук">
+        <div class="chips" id="modes" role="group" aria-label="Режим гри">
+            <button class="chip active" data-mode="all">Усі</button>
+            <button class="chip" data-mode="RAAS">RAAS</button>
+            <button class="chip" data-mode="AAS">AAS</button>
+            <button class="chip" data-mode="Invasion">Invasion</button>
+            <button class="chip" data-mode="Seed">Seed</button>
+        </div>
+        <select id="sort" aria-label="Сортування">
+            <option value="players">Спершу найповніші</option>
+            <option value="rank">За рейтингом</option>
+            <option value="queue">За чергою</option>
+        </select>
+    </section>
+
+    <main>
+        <div id="server" class="list" aria-live="polite"></div>
+    </main>
+
+    <script src="common.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

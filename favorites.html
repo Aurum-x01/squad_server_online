@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squad: улюблені сервери</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">Усі сервери</a>
+        <a href="favorites.html" class="active">Улюблені <span id="fav-count"></span></a>
+    </nav>
+
+    <header class="hero">
+        <div class="radar" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="hero-text">
+            <h1>Улюблені сервери</h1>
+            <p class="stats" id="stats">Сканую ефір…</p>
+        </div>
+    </header>
+
+    <main>
+        <div id="server" class="list" aria-live="polite"></div>
+    </main>
+
+    <script src="common.js"></script>
+    <script src="favorites.js"></script>
+</body>
+</html>
